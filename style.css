@@ -1,0 +1,128 @@
+/* - Very dark blue (main BG): hsl(217, 54%, 11%)
+- Very dark blue (card BG): hsl(216, 50%, 16%)
+- Very dark blue (line): hsl(215, 32%, 27%)
+- White: hsl(0, 0%, 100%) */
+:root {
+    --Outfit: 'Outfit', sans-serif;
+    --mainBG: hsl(217, 54%, 11%); 
+    --cardBG: hsl(216, 50%, 16%);
+    --line: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+body {
+    font-family: var(--Outfit);
+    font-weight: 400;
+    background-color: var(--mainBG);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Canvas {
+    background-color: var(--cardBG);
+    width: 20rem;
+    padding: 1.3rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 13px;
+    border-radius: 1rem;
+    box-shadow: 1px 30px 19px 20px rgba(0,0,0,0.05);
+    -webkit-box-shadow: 1px 30px 19px 20px rgba(0,0,0,0.05);
+    -moz-box-shadow: 1px 30px 19px 20px rgba(0,0,0,0.05);
+    position: static;
+}
+.Canvas .main-image {
+    border-radius: 0.5rem;
+    margin-bottom: 10px;
+    position: relative;
+}
+.Canvas .main-image .nft-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5rem;
+}
+.Canvas .main-image .view-icon {
+    background-color: hsl(178, 100%, 50%);
+    position: absolute;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    border-radius: 0.5rem;
+}
+.Canvas .main-image:hover .view-icon {
+    opacity: 0.55;
+    cursor: pointer;
+}
+.Canvas .main-image .view-icon img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.Canvas h1 {
+    color: var(--white);
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+.Canvas p {
+    color: hsl(215, 51%, 70%);
+    font-weight: 300;
+    font-size: 1.05rem;
+    line-height: 1.35;
+}
+.Canvas .flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5px;
+}
+.Canvas .flex .container {
+    display: flex;
+    column-gap: 8px;
+    align-items: center;
+}
+.Canvas .flex .container span {
+    font-size: 0.945rem;
+    font-weight: 400;
+}
+.Canvas hr {
+    margin-top: 8px;
+    color: hsl(215, 51%, 70%);
+    opacity: 0.05;
+}
+.Canvas .pro-container {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    padding-bottom: 8px;
+}
+.Canvas .pro-container .avatar-image {
+    width: 1.975rem;
+    border: 1px solid #fff;
+    border-radius: 50%;
+}
+.Canvas .pro-container span {
+    color: hsl(215, 51%, 70%);
+    font-size: 0.975rem;
+    font-weight: 300;
+}
+.Canvas .pro-container span span {
+    color: var(--white);
+}
+.Canvas h1:hover,
+.Canvas .pro-container span span:hover {
+    cursor: pointer;
+    color: hsl(178, 100%, 50%);
+}
